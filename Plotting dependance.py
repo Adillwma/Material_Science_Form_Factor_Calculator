@@ -1,11 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from form_factor_calculator import form_factor_calc
+from form_factor_calculator import find_form_factor
 
 length = 0.2
 width = 0.01
 terms = 1000
-
+shape = 'strip'
 
 # Plotting the effect of varying the length, width and number of terms on the form factor
 nvarlist=np.linspace(1,30,30,dtype=int)
@@ -17,10 +17,10 @@ formB=[]
 formN=[]
 
 for i in range(0,100):
-    formA.append(form_factor_calc(avarlist[i], width, terms))
-    formB.append(form_factor_calc(length, bvarlist[i], terms))
+    formA.append(find_form_factor(avarlist[i], width, shape, terms))
+    formB.append(find_form_factor(length, bvarlist[i], shape, terms))
 for i in range(0,30):
-    formN.append(form_factor_calc(length, width, nvarlist[i]))    
+    formN.append(find_form_factor(length, width, shape, nvarlist[i]))    
 
 # create three plots in a row on one figure ax
 fig, ax = plt.subplots(1,3,figsize=(15,5))

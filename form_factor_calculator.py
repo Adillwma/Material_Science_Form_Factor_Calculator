@@ -6,7 +6,7 @@
 
 import numpy as np
 
-def form_factor_calc(length, width, shape='strip', terms=10):
+def find_form_factor(length, width, shape='strip', terms=10):
     """
     Calculates the form factor for a rectangular strip, or a cicular rod of homegenous material.
     When inputting the dimensions make sure length > width.
@@ -29,7 +29,7 @@ def form_factor_calc(length, width, shape='strip', terms=10):
     """    
 
     if shape == 'rod':
-        form_factor = np.pi**4 * (width/2) * 0.5
+        form_factor = np.pi**4 * width * 0.25   # Simplfied from pi^4 * radius / 2 as we have diameter not radius
 
     elif shape == 'strip':
         summation=0
@@ -44,6 +44,6 @@ def form_factor_calc(length, width, shape='strip', terms=10):
 # Example
 length = 0.00234
 width = 2E-4
-print(f"Form factor: {form_factor_calc(length, width)}")
+print(f"Form factor: {find_form_factor(length, width)}")
 
 
