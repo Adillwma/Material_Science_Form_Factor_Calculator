@@ -17,12 +17,7 @@ Calculate the form-factor coeffcient numerically for a sample of material, for u
 ## Introduction 
 In material physics, the term "form-factor" typically denoted with the variable 'F' is a dimensionless quantity used in the study of materials and their dynamic properties. The form factor plays a crucial role in understanding the material's behavior under various physical conditions, including its response to external forces.
 
-The form factor is a fucntion of the samples dimensions from which the function takes into account the samples cross-sectional area, volume, surface area and aspect ratio. Making the form factor an essential concept in material physics and engineering.
-
-## Installation
-
-
-
+The form factor is a function of the samples dimensions from which the function takes into account the samples cross-sectional area, volume, surface area and aspect ratio. Making the form factor an essential concept in material physics and engineering.
 
 ## Usage
 This repo provides a python function called find_form_factor that approximates the form factor for a rectangular strip or a circular rod, made of a homogeneous isotropic material. To use the find_form_factor function, you need to provide the following arguments:
