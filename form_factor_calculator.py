@@ -24,7 +24,7 @@ def find_form_factor(length, width, shape='strip', terms=10):
         Strip: Read, B. E., and G. D. Dean. "The Determination of Dynamic Properties of Polymers and 
                Composites, Adam Hilger, Ltd." Herts, England (1978).
 
-        Rod: 
+        Rod: University of Bristol - Dynamic Lab Manual II (2021)
 
     """    
 
